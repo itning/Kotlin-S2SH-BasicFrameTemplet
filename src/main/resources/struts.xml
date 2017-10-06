@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <!-- 开启使用开发模式，详细错误提示 -->
+    <constant name="struts.devMode" value="false" />
+    <!-- 指定资源编码类型 -->
+    <constant name="struts.i18n.encoding" value="UTF-8" />
+    <!-- 指定每次请求到达，重新加载资源文件 -->
+    <constant name="struts.i18n.reload" value="false" />
+    <!-- 指定每次配置文件更改后，自动重新加载 -->
+    <constant name="struts.configuration.xml.reload" value="false" />
+    <!--包名随便不能重复 通常 一个业务模块 用一个包-->
+    <package name="user" extends="struts-default" namespace="/">
+        <action name="hello" class="cn.itning.action.HelloAction" method="execute">
+            <result name="success">/success.jsp</result>
+        </action>
+    </package>
+</struts>

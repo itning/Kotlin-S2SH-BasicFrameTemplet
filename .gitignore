@@ -1,0 +1,42 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Java template
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+.idea/
+Kotlin-S2SH-BasicFrameTemplet.iml
+target/Kotlin-S2SH-BasicFrameTemplet/META-INF/
+target/Kotlin-S2SH-BasicFrameTemplet/WEB-INF/classes/User.hbm.xml
+target/Kotlin-S2SH-BasicFrameTemplet/WEB-INF/classes/applicationContext.xml
+target/Kotlin-S2SH-BasicFrameTemplet/WEB-INF/classes/conn.properties
+target/Kotlin-S2SH-BasicFrameTemplet/WEB-INF/classes/struts.xml
+"target/Kotlin-S2SH-BasicFrameTemplet/WEB-INF/classes/struts2\346\211\200\346\234\211\351\205\215\347\275\256.xml"
+target/Kotlin-S2SH-BasicFrameTemplet/WEB-INF/web.xml
+target/Kotlin-S2SH-BasicFrameTemplet/index.jsp
+target/Kotlin-S2SH-BasicFrameTemplet/success.jsp
+target/classes/User.hbm.xml
+target/classes/applicationContext.xml
+target/classes/conn.properties
+target/classes/struts.xml
+"target/classes/struts2\346\211\200\346\234\211\351\205\215\347\275\256.xml"
+target/generated-sources/
