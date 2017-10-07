@@ -13,10 +13,32 @@
     <constant name="struts.i18n.reload" value="false" />
     <!-- 指定每次配置文件更改后，自动重新加载 -->
     <constant name="struts.configuration.xml.reload" value="false" />
+    <!-- 把主题配置成simple -->
+    <constant name="struts.ui.theme" value="simple" />
     <!--包名随便不能重复 通常 一个业务模块 用一个包-->
     <package name="user" extends="struts-default" namespace="/">
         <action name="hello" class="cn.itning.action.HelloAction" method="execute">
             <result name="success">/success.jsp</result>
         </action>
     </package>
+
+    <!-- 配置全局结果及异常映射 -->
+    <!--<package name="base-default" extends="struts-default">
+        &lt;!&ndash; 返回结果类型 &ndash;&gt;
+        <result-types>
+            <result-type name="error" class="cn.itcast.core.action.SysResultAction"></result-type>
+        </result-types>
+        &lt;!&ndash; 全局返回结果 &ndash;&gt;
+        <global-results>
+            <result name="error" type="error">/WEB-INF/jsp/error.jsp</result>
+            <result name="sysError">/WEB-INF/jsp/error.jsp</result>
+            <result name="input">/WEB-INF/jsp/error.jsp</result>
+        </global-results>
+        &lt;!&ndash; 全局异常映射 &ndash;&gt;
+        <global-exception-mappings>
+            <exception-mapping result="sysError" exception="cn.itcast.core.exception.SysException"></exception-mapping>
+            <exception-mapping result="input" exception="java.lang.Exception"></exception-mapping>
+        </global-exception-mappings>
+    </package>-->
+    <!--<include file="cn/itcast/test/conf/test-struts.xml"></include>-->
 </struts>

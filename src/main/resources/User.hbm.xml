@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE hibernate-mapping PUBLIC 
-	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!DOCTYPE hibernate-mapping PUBLIC
+		"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping package="cn.itning.entity">
 
-	<class name="User" table="t_dept">
-		<id name="id" column="deptId">
+	<class name="User" table="user">
+		<id name="id" column="userid">
 			<generator class="native"/>
 		</id>
-		<property name="name" column="deptName"/>
+		<property name="name" column="username"/>
 	</class>
 
 </hibernate-mapping>
-
-
-

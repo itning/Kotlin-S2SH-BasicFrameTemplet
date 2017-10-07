@@ -13,16 +13,17 @@
          http://www.springframework.org/schema/tx
      	 http://www.springframework.org/schema/tx/spring-tx.xsd">
 
-    <bean id="helloAction" class="cn.itning.action.HelloAction" scope="prototype">
+   <!-- <bean id="helloAction" class="cn.itning.action.HelloAction" scope="prototype">
         <property name="userService" ref="userService"/>
     </bean>
     <bean id="userService" class="cn.itning.service.UserService">
         <property name="userDao" ref="userDao"/>
-    </bean>
+    </bean>-->
     <bean id="userDao" class="cn.itning.dao.UserDao">
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
 
+    <context:component-scan base-package="cn.itning"/>
     <context:property-placeholder location="classpath:conn.properties"/><!-- 加载配置文件 -->
     <!-- 1) 连接池实例 -->
     <bean id="dataSource" class="${dataSource}">
@@ -92,6 +93,10 @@
     <bean id="txManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
         <property name="sessionFactory" ref="sessionFactory"/>
     </bean>
+
+    <!--@Transactional-->
+    <!--<tx:annotation-driven transaction-manager="txManager"/>-->
+
     <!-- # 事务增强 -->
     <tx:advice id="txAdvice" transaction-manager="txManager">
         <tx:attributes>

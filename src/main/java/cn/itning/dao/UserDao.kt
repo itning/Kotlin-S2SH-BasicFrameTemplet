@@ -1,13 +1,14 @@
 package cn.itning.dao
 
-import org.hibernate.SessionFactory
+import cn.itning.entity.User
+import org.springframework.orm.hibernate5.support.HibernateDaoSupport
 
-class UserDao {
-
-    var sessionFactory: SessionFactory? = null
+open class UserDao : HibernateDaoSupport() {
 
     fun say(): String {
-        println(sessionFactory)
+        //val user= hibernateTemplate.get(User::class.java, "1");
+        val user = currentSession().get(User::class.java, "1")
+        println(if (user != null) user.id + ":" + user.name else "user is null")
         return "ok"
     }
 }
